@@ -36,7 +36,7 @@
 
         main {
             display: grid;
-            grid-template-rows: 10% 50% 25% 1fr
+            grid-template-rows: 10% 50% 28% 1fr
 
             
         }
@@ -120,11 +120,11 @@
             height: 50px;
             cursor: pointer;
         }
-         
-        .gameButtons button img:hover{
+        
+        .gameButtons button:hover img{
+            animation: popupA 0.5s linear ;
             transition: 0.5s;
-            animation: popupA 0.5s forwards ;
-            
+        
         }
         
         .displaySections img{
@@ -140,7 +140,7 @@
             animation: loadA 2s forwards;
         }
         .restartBTN{
-            margin-top: 2rem;
+            margin-top: 1rem;
 
     
         }
@@ -156,8 +156,8 @@
         }
         .js-actionPara{
             position: absolute;
-            top: -13rem;
-            left: 35%;
+            top: -12rem;
+            left: 45%;
             font-size: clamp(0.6rem, 3vw, 1rem);
         }
         /* // key frames         */
@@ -372,7 +372,7 @@
         .innerHTML = ` <img src="gameImgs/${computerMove}.png" alt=""></button>`;
 
         document.querySelector('.js-actionPara')
-            .innerHTML = ` Y : ${inputMove} -  C : ${computerMove}`;
+            .innerHTML = `${inputMove}`;
 
         //    display RESULT on page 
         document.querySelector('.js-resultPara')
